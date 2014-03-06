@@ -1,0 +1,214 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Amber_and_Teething.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="TopBarGrid" Background="{StaticResource TopBarGridColor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/Assets/LogoOnTitle.png" Stretch="None" />
+                <TextBlock Grid.Column="1" FontSize="30" Text="Amber and Teething" VerticalAlignment="Center"
+                           Foreground="White" />
+
+            </Grid>
+            <!--<TextBlock Text="Quotes and Messages" VerticalAlignment="Top" HorizontalAlignment="Center"
+                       Margin="0,20,0,0" FontSize="30" Foreground="{StaticResource DarkBlueTextBlock}"/>-->
+        </Grid>
+
+
+        <phone:Pivot Grid.Row="1" Margin="0,-85,0,0" >
+            <phone:PivotItem>
+                <phone:PivotItem.Header>
+                    <TextBlock Text="Home" FontSize="50" />
+                </phone:PivotItem.Header>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Height="70" Width="300">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Assets/LogoOnTitle.png" Stretch="None" />
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Amber and Teething" HorizontalAlignment="Center" FontSize="22" Foreground="Black" />
+                            <TextBlock Grid.Row="1" Text="your complete guide" HorizontalAlignment="Center" FontSize="22" Foreground="Black" />
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="1" Margin="-10,0">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/Assets/HomePageImage.png" Stretch="UniformToFill"/>
+                        </Grid.Background>
+                        <Grid Margin="20 40">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="3*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.Background>
+                                <SolidColorBrush Color="White" Opacity="0.75"/>
+                            </Grid.Background>
+                            <TextBlock Text="Did you know ?" HorizontalAlignment="Center" FontSize="30" Foreground="{StaticResource TopBarGridColor}" />
+                            <phone:Pivot Grid.Row="1">
+                                <phone:PivotItem Margin="-7">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Amber teething necklaces are sold in pharmacies throughout Europe including Germany, Switzerland and Austria."
+                                               Foreground="{StaticResource FontColorBrown}" TextWrapping="Wrap"
+                                               Margin="20"/>
+                                </phone:PivotItem>
+
+                                <phone:PivotItem Margin="-7">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Amber floats in salt water but sinks in fresh water."
+                                               Foreground="{StaticResource FontColorBrown}" TextWrapping="Wrap"
+                                               Margin="20"/>
+                                </phone:PivotItem>
+
+                                <phone:PivotItem Margin="-7">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Unlike the minerals and glass, amber is warm against the skin"
+                                               Foreground="{StaticResource FontColorBrown}" TextWrapping="Wrap"
+                                               Margin="20"/>
+                                </phone:PivotItem>
+
+                                <phone:PivotItem Margin="-7">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="When amber is burning it smells like pine."
+                                               Foreground="{StaticResource FontColorBrown}" TextWrapping="Wrap"
+                                               Margin="20"/>
+                                </phone:PivotItem>
+
+                                <phone:PivotItem Margin="-7">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="The oldest amber dates back to 320 million years ago."
+                                               Foreground="{StaticResource FontColorBrown}" TextWrapping="Wrap"
+                                               Margin="20"/>
+                                </phone:PivotItem>
+
+                                <phone:PivotItem Margin="-7">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Amber comes in more than 300 different shades! The most common colors are honey, green, cherry, cognac, citrine, and butterscotch."
+                                               Foreground="{StaticResource FontColorBrown}" TextWrapping="Wrap"
+                                               Margin="20"/>
+                                </phone:PivotItem>
+
+                                <phone:PivotItem Margin="-7">
+                                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="The term electricity actually stems from the Greek word electron which is the Greek name for amber because it can store static electricity."
+                                               Foreground="{StaticResource FontColorBrown}" TextWrapping="Wrap"
+                                               Margin="20"/>
+                                </phone:PivotItem>
+                            </phone:Pivot>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+            </phone:PivotItem>
+
+            <phone:PivotItem>
+                <phone:PivotItem.Header>
+                    <TextBlock Text="Baltic Amber" FontSize="50" />
+                </phone:PivotItem.Header>
+
+                <ScrollViewer>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Border VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/Baltic Amber/amber_in_medicine.jpg" Stretch="Fill" />
+                                <TextBlock Grid.Column="1" Text="Amber in Medicine" FontSize="25" Margin="20 0 0 0"
+                                   Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="1" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/Baltic Amber/relative_of_baltic_amber.jpg" Stretch="Fill" />
+                                <TextBlock Grid.Column="1" Text="Relatives of Baltic Amber" FontSize="25" Margin="20 0 0 0"
+                                   Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="2" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/Baltic Amber/chemical_composition.jpg" Stretch="Fill" />
+                                <TextBlock Grid.Column="1" Text="Chemical Composition and Morphology of Baltic Amber" FontSize="25" Margin="20 0 0 0"
+                                   Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" />
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="3" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/Baltic Amber/amber_room.jpg" Stretch="Fill" />
+                                <TextBlock Grid.Column="1" Text="The Amber Room" FontSize="25" Margin="20 0 0 0"
+                                   Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="4" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/Baltic Amber/myths_for_amber.jpg" Stretch="Fill" />
+                                <TextBlock Grid.Column="1" Text="Myths and legend about Baltic Amber" FontSize="25" Margin="20 0 0 0"
+                                   Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ScrollViewer>
+            </phone:PivotItem>
+
+        </phone:Pivot>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>
