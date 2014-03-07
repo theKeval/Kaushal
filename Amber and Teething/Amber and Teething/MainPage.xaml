@@ -44,7 +44,7 @@
         <phone:Pivot Grid.Row="1" Margin="0,-85,0,0" >
             <phone:PivotItem>
                 <phone:PivotItem.Header>
-                    <TextBlock Text="Home" FontSize="50" />
+                    <TextBlock Text="Home" FontSize="45" />
                 </phone:PivotItem.Header>
 
                 <Grid>
@@ -131,7 +131,7 @@
 
             <phone:PivotItem>
                 <phone:PivotItem.Header>
-                    <TextBlock Text="Baltic Amber" FontSize="50" />
+                    <TextBlock Text="Baltic Amber" FontSize="45" />
                 </phone:PivotItem.Header>
 
                 <ScrollViewer>
@@ -200,6 +200,84 @@
                                 </Grid.ColumnDefinitions>
                                 <Image Source="/Assets/Baltic Amber/myths_for_amber.jpg" Stretch="Fill" />
                                 <TextBlock Grid.Column="1" Text="Myths and legend about Baltic Amber" FontSize="25" Margin="20 0 0 0"
+                                   Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ScrollViewer>
+            </phone:PivotItem>
+
+            <phone:PivotItem>
+                <phone:PivotItem.Header>
+                    <TextBlock Text="Amber and Teething" FontSize="45" />
+                </phone:PivotItem.Header>
+
+                <ScrollViewer>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Border VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/AmberAndTeething/neckless_for_amber.jpg" Stretch="Fill" />
+                                <TextBlock Grid.Column="1" Text="How Do Amber Teething Necklesses Work" FontSize="25" Margin="20 0 0 0"
+                                   Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" />
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="1" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/AmberAndTeething/6_top_tips.jpg" Stretch="Fill" />
+                                <TextBlock Grid.Column="1" Text="6 Top Tips When Shopping for Amber Teething Jewellery" FontSize="25" Margin="20 0 0 0"
+                                   Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" />
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="2" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/AmberAndTeething/7_easy_tests.jpg" Stretch="Fill" />
+                                <TextBlock Grid.Column="1" Text="7 Easy Tests to Identify Real Amber" FontSize="25" Margin="20 0 0 0"
+                                   Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" />
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="3" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/AmberAndTeething/5_misconception.jpg" Stretch="Fill" />
+                                <TextBlock Grid.Column="1" Text="5 Common Misconceptions About Amber Teething Necklesses" FontSize="25" Margin="20 0 0 0"
+                                   Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" />
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="4" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3.3*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/AmberAndTeething/6_best_prectices.jpg" Stretch="Fill" />
+                                <TextBlock Grid.Column="1" Text="6 Best Practices for Safe Amber Teething jewellery Usage" FontSize="25" Margin="20 0 0 0"
                                    Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" />
                             </Grid>
                         </Border>

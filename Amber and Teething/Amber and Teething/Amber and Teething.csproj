@@ -121,10 +121,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppListLogo %28160x160%29.png" />
     <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\AmberAndTeething\5_misconception.jpg" />
+    <Content Include="Assets\AmberAndTeething\6_best_prectices.jpg" />
+    <Content Include="Assets\AmberAndTeething\6_top_tips.jpg" />
+    <Content Include="Assets\AmberAndTeething\7_easy_tests.jpg" />
+    <Content Include="Assets\AmberAndTeething\neckless_for_amber.jpg" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\AppListLogo%28160x160%29.png" />
     <Content Include="Assets\Baltic Amber\amber_in_medicine.jpg" />
     <Content Include="Assets\Baltic Amber\amber_room.jpg" />
     <Content Include="Assets\Baltic Amber\chemical_composition.jpg" />
