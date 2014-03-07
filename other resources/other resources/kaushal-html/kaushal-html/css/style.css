@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+    font-family: cambria;
+    font-size: 23px;
+    font-weight: bold;
+}
+.widget {
+    width:100%;
+}
+
+.content p strong {
+    color: #C76328;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+li {
+	color: #5D5D5D;
+    font-size: 15px;
+}
+
+.content p {
+    color: #5D5D5D;
+    font-size: 15px;
+}
+
+.article img {
+    width: 100%;
+}
