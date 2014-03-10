@@ -93,6 +93,21 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Extensions.cs" />
+    <Compile Include="HtmlViewer\HtmlCssParser.cs" />
+    <Compile Include="HtmlViewer\HtmlFromXamlConverter.cs" />
+    <Compile Include="HtmlViewer\HtmlLexicalAnalyzer.cs" />
+    <Compile Include="HtmlViewer\HtmlParser.cs" />
+    <Compile Include="HtmlViewer\HtmlSchema.cs" />
+    <Compile Include="HtmlViewer\HTMLTextBoxHyperlynkNavigaionPolitic.cs" />
+    <Compile Include="HtmlViewer\HtmlTokenType.cs" />
+    <Compile Include="HtmlViewer\HtmlToXamlConverter.cs" />
+    <Compile Include="HtmlViewer\HTMLViewer.xaml.cs">
+      <DependentUpon>HTMLViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlViewer\HyperlinkClickEventArgs.cs" />
+    <Compile Include="HtmlViewer\ImageClickEventArgs.cs" />
+    <Compile Include="HtmlViewer\StringHTMLAdditions.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -103,13 +118,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="teeth_p1.xaml.cs">
+      <DependentUpon>teeth_p1.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="HtmlViewer\HTMLViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="teeth_p1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,6 +180,28 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="hello.txt" />
+    <Content Include="HtmlContent\baltic_p1.html" />
+    <Content Include="HtmlContent\baltic_p2.html" />
+    <Content Include="HtmlContent\baltic_p3.html" />
+    <Content Include="HtmlContent\baltic_p4.html" />
+    <Content Include="HtmlContent\baltic_p5.html" />
+    <Content Include="HtmlContent\teeth_p1.html" />
+    <Content Include="HtmlContent\teeth_p2.html" />
+    <Content Include="HtmlContent\teeth_p3.html" />
+    <Content Include="HtmlContent\teeth_p4.html" />
+    <Content Include="HtmlContent\teeth_p5.html" />
+    <Content Include="HtmlContent\img\5_misconception.jpg" />
+    <Content Include="HtmlContent\img\6_best_prectices.jpg" />
+    <Content Include="HtmlContent\img\6_top_tips.jpg" />
+    <Content Include="HtmlContent\img\7_easy_tests.jpg" />
+    <Content Include="HtmlContent\img\amber_in_medicine.jpg" />
+    <Content Include="HtmlContent\img\amber_room.jpg" />
+    <Content Include="HtmlContent\img\chemical_composition.jpg" />
+    <Content Include="HtmlContent\img\myths_for_amber.jpg" />
+    <Content Include="HtmlContent\img\neckless_for_amber.jpg" />
+    <Content Include="HtmlContent\img\relative_of_baltic_amber.jpg" />
+    <Content Include="TeethPages\teeth_p1.html" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">

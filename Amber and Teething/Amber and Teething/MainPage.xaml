@@ -28,13 +28,22 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="4.5*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="1.5*"/>
                 </Grid.ColumnDefinitions>
 
                 <Image Source="/Assets/LogoOnTitle.png" Stretch="None" />
-                <TextBlock Grid.Column="1" FontSize="30" Text="Amber and Teething" VerticalAlignment="Center"
+                <TextBlock Grid.Column="1" FontSize="20" Text="Amber and Teething" VerticalAlignment="Center"
                            Foreground="White" />
-
+                <Grid Grid.Column="2" Tap="tblock_share_Tap">
+                    <TextBlock x:Name="tblock_share"  Text="SHARE" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="20"  Foreground="White"/>
+                </Grid>
+                <Grid Grid.Column="3" Tap="tblock_browse_Tap">
+                    <TextBlock x:Name="tblock_browse"  Text="BROWSE" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="20"  Foreground="White"/>
+                </Grid>
             </Grid>
             <!--<TextBlock Text="Quotes and Messages" VerticalAlignment="Top" HorizontalAlignment="Center"
                        Margin="0,20,0,0" FontSize="30" Foreground="{StaticResource DarkBlueTextBlock}"/>-->
@@ -42,6 +51,7 @@
 
 
         <phone:Pivot Grid.Row="1" Margin="0,-85,0,0" >
+
             <phone:PivotItem>
                 <phone:PivotItem.Header>
                     <TextBlock Text="Home" FontSize="45" />
@@ -144,7 +154,8 @@
                             <RowDefinition Height="100" />
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
-                        <Border VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                        <Border x:Name="bdr_balticP1" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1"
+                                Tap="bdr_teethP1_Tap">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -156,7 +167,8 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="1" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                        <Border x:Name="bdr_balticP2" Grid.Row="1" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1"
+                                Tap="bdr_teethP1_Tap">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -168,7 +180,8 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="2" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                        <Border x:Name="bdr_balticP3" Grid.Row="2" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1"
+                                Tap="bdr_teethP1_Tap">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -180,7 +193,8 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="3" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                        <Border x:Name="bdr_balticP4" Grid.Row="3" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1"
+                                Tap="bdr_teethP1_Tap">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -192,7 +206,8 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="4" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                        <Border x:Name="bdr_balticP5" Grid.Row="4" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1"
+                                Tap="bdr_teethP1_Tap">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -222,7 +237,8 @@
                             <RowDefinition Height="100" />
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
-                        <Border VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                        <Border x:Name="bdr_teethP1" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1"
+                                Tap="bdr_balticP1_Tap">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -234,7 +250,8 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="1" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                        <Border x:Name="bdr_teethP2" Grid.Row="1" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1"
+                                Tap="bdr_balticP1_Tap">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -246,7 +263,8 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="2" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                        <Border x:Name="bdr_teethP3" Grid.Row="2" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1"
+                                Tap="bdr_balticP1_Tap">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -258,7 +276,8 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="3" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                        <Border x:Name="bdr_teethP4" Grid.Row="3" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1"
+                                Tap="bdr_balticP1_Tap">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -270,7 +289,8 @@
                             </Grid>
                         </Border>
 
-                        <Border Grid.Row="4" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1">
+                        <Border x:Name="bdr_teethP5" Grid.Row="4" VerticalAlignment="Top" Height="100" BorderBrush="Black" BorderThickness="1"
+                                Tap="bdr_balticP1_Tap">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>

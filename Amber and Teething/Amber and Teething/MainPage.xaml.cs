@@ -8,6 +8,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Amber_and_Teething.Resources;
+using Amber_and_Teething.Helper;
+using Microsoft.Phone.Tasks;
 
 namespace Amber_and_Teething
 {
@@ -20,6 +22,28 @@ namespace Amber_and_Teething
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+
+        private void bdr_teethP1_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/teeth_p1.xaml", UriKind.Relative), ((Border)sender).Name);
+        }
+
+        private void bdr_balticP1_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/teeth_p1.xaml", UriKind.Relative), ((Border)sender).Name);
+        }
+
+        private void tblock_browse_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            var wbt = new WebBrowserTask();
+            wbt.Uri = new Uri("http://www.amberteethingnecklace.org", UriKind.Absolute);
+            wbt.Show();
+        }
+
+        private void tblock_share_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+
         }
 
         // Sample code for building a localized ApplicationBar

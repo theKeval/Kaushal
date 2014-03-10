@@ -57,6 +57,12 @@ namespace Amber_and_Teething
 
         }
 
+        // my global variables
+
+        //public static string teeth_p1_string = "";
+
+
+
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
