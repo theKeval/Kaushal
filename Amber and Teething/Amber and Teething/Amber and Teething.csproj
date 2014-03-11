@@ -94,6 +94,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helper\Extensions.cs" />
+    <Compile Include="Helper\IsolatedStorageKeys.cs" />
     <Compile Include="HtmlViewer\HtmlCssParser.cs" />
     <Compile Include="HtmlViewer\HtmlFromXamlConverter.cs" />
     <Compile Include="HtmlViewer\HtmlLexicalAnalyzer.cs" />
@@ -141,6 +142,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
@@ -165,6 +167,7 @@
     <Content Include="Assets\Baltic Amber\relative_of_baltic_amber.jpg" />
     <Content Include="Assets\HomePageImage.png" />
     <Content Include="Assets\LogoOnTitle.png" />
+    <Content Include="Assets\share%2863x63%29.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -201,13 +204,24 @@
     <Content Include="HtmlContent\img\myths_for_amber.jpg" />
     <Content Include="HtmlContent\img\neckless_for_amber.jpg" />
     <Content Include="HtmlContent\img\relative_of_baltic_amber.jpg" />
+    <Content Include="README_FIRST.txt" />
     <Content Include="TeethPages\teeth_p1.html" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

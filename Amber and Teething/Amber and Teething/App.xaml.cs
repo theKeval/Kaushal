@@ -7,6 +7,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Amber_and_Teething.Resources;
+using System.IO.IsolatedStorage;
+using Amber_and_Teething.Helper;
 
 namespace Amber_and_Teething
 {
@@ -62,11 +64,41 @@ namespace Amber_and_Teething
         //public static string teeth_p1_string = "";
 
 
+        public static string isAccept
+        {
+            get
+            {
+                if (IsolatedStorageSettings.ApplicationSettings.Contains(IsolatedStorageKeys.IsRatedKey))
+                {
+                    return (string)IsolatedStorageSettings.ApplicationSettings[IsolatedStorageKeys.IsRatedKey];
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
+            set
+            {
+                if (IsolatedStorageSettings.ApplicationSettings.Contains(IsolatedStorageKeys.IsRatedKey))
+                {
+                    IsolatedStorageSettings.ApplicationSettings[IsolatedStorageKeys.IsRatedKey] = value;
+                }
+                else
+                {
+                    IsolatedStorageSettings.ApplicationSettings.Add(IsolatedStorageKeys.IsRatedKey, value);
+                    IsolatedStorageSettings.ApplicationSettings.Save();
+                }
+            }
+        }
+
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
+            
+            
+
         }
 
         // Code to execute when the application is activated (brought to foreground)

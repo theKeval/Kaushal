@@ -37,8 +37,9 @@
                 <TextBlock Grid.Column="1" FontSize="20" Text="Amber and Teething" VerticalAlignment="Center"
                            Foreground="White" />
                 <Grid Grid.Column="2" Tap="tblock_share_Tap">
-                    <TextBlock x:Name="tblock_share"  Text="SHARE" HorizontalAlignment="Center" VerticalAlignment="Center"
-                           FontSize="20"  Foreground="White"/>
+                    <!--<TextBlock x:Name="tblock_share"  Text="SHARE" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="20"  Foreground="White"/>-->
+                    <Image Source="/Assets/share(63x63).png" Stretch="None" />
                 </Grid>
                 <Grid Grid.Column="3" Tap="tblock_browse_Tap">
                     <TextBlock x:Name="tblock_browse"  Text="BROWSE" HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -306,7 +307,20 @@
             </phone:PivotItem>
 
         </phone:Pivot>
-
+        
+        <!--<Grid Grid.RowSpan="2" Visibility="Visible" Background="#FFC7C7C7" Margin="50"
+              HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <TextBlock TextWrapping="Wrap" Text="The information and claims provided in this application have not been evaluated by the Food and Drug Administration. All information is presented for general reference and education purposes, and is not intended to replace professional medical advice. We disclaim all liability in connection with use of this information." Foreground="Black" />
+            <Button Grid.Row="1" Content="Accept" Click="Button_Click" BorderBrush="Black"
+                    Margin="0 20 0 0" Foreground="#FF060606" />
+            
+        </Grid>-->
+        
     </Grid>
 
 </phone:PhoneApplicationPage>

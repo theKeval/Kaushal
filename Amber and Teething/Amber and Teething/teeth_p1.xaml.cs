@@ -11,6 +11,7 @@ using Windows.Storage;
 using System.IO;
 using System.IO.IsolatedStorage;
 using Amber_and_Teething.Helper;
+using Microsoft.Phone.Tasks;
 
 namespace Amber_and_Teething
 {
@@ -23,11 +24,12 @@ namespace Amber_and_Teething
 
         //string abc;
         public StorageFile storageFolder_teethPages;
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        public static string navigatedData;
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             try
             {
-                string navigatedData = (string)NavigationService.GetNavigationData();
+                navigatedData = (string)NavigationService.GetNavigationData();
 
                 Uri uri;
                 switch (navigatedData)
@@ -164,6 +166,99 @@ namespace Amber_and_Teething
 
 
 
+        }
+
+        private void tblock_share_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            ShareLinkTask shareLinkTask = new ShareLinkTask()
+            {
+                Title = "Amber & Teething",
+                LinkUri = new Uri("http://www.amberteethingnecklace.org/", UriKind.Absolute),
+
+            };
+            shareLinkTask.Show();
+        }
+
+        private void tblock_browse_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            WebBrowserTask wbt = new WebBrowserTask();
+            switch (navigatedData)
+            {
+                case "bdr_teethP1":
+
+                    wbt.Uri = new Uri("http://www.amberteethingnecklace.org/how-do-amber-teething-necklaces-work/", UriKind.Absolute);
+                    wbt.Show();
+
+                    break;
+
+                case "bdr_teethP2":
+
+                    wbt.Uri = new Uri("http://www.amberteethingnecklace.org/top-tips-when-shopping-for-amber-teething-jewelry/", UriKind.Absolute);
+                    wbt.Show();
+
+                    break;
+
+                case "bdr_teethP3":
+
+                    wbt.Uri = new Uri("http://www.amberteethingnecklace.org/easy-tests-to-identify-real-amber/", UriKind.Absolute);
+                    wbt.Show();
+
+                    break;
+
+                case "bdr_teethP4":
+
+                    wbt.Uri = new Uri("http://www.amberteethingnecklace.org/common-misconceptions-about-ambe-teething-necklaces/", UriKind.Absolute);
+                    wbt.Show();
+
+                    break;
+
+                case "bdr_teethP5":
+
+                    wbt.Uri = new Uri("http://www.amberteethingnecklace.org/advices-for-using-amber-teething-jewelry/", UriKind.Absolute);
+                    wbt.Show();
+
+                    break;
+
+
+
+                case "bdr_balticP1":
+
+                    wbt.Uri = new Uri("http://www.amberteethingnecklace.org/amber-in-medicine/", UriKind.Absolute);
+                    wbt.Show();
+
+                    break;
+
+                case "bdr_balticP2":
+
+                    wbt.Uri = new Uri("http://www.amberteethingnecklace.org/relatives-of-baltic-amber/", UriKind.Absolute);
+                    wbt.Show();
+
+                    break;
+
+                case "bdr_balticP3":
+
+                    wbt.Uri = new Uri("http://www.amberteethingnecklace.org/composition-morphology-baltic-amber/", UriKind.Absolute);
+                    wbt.Show();
+
+                    break;
+
+                case "bdr_balticP4":
+
+                    wbt.Uri = new Uri("http://www.amberteethingnecklace.org/the-amber-room/", UriKind.Absolute);
+                    wbt.Show();
+
+                    break;
+
+                case "bdr_balticP5":
+
+                    wbt.Uri = new Uri("http://www.amberteethingnecklace.org/myths-legends-baltic-amber/", UriKind.Absolute);
+                    wbt.Show();
+
+                    break;
+
+                default:
+                    break;
+            }
         }
 
     }

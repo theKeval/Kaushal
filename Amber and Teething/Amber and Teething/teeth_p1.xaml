@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
 
 
-        <Grid x:Name="TopBarGrid" Background="{StaticResource TopBarGridColor}">
+        <!--<Grid x:Name="TopBarGrid" Background="{StaticResource TopBarGridColor}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -37,12 +37,44 @@
                 <TextBlock Grid.Column="1" FontSize="30" Text="Amber and Teething" VerticalAlignment="Center"
                            Foreground="White" />
 
+            </Grid>-->
+            <!--<TextBlock Text="Quotes and Messages" VerticalAlignment="Top" HorizontalAlignment="Center"
+                       Margin="0,20,0,0" FontSize="30" Foreground="{StaticResource DarkBlueTextBlock}"/>-->
+        <!--</Grid>-->
+
+
+        <Grid x:Name="TopBarGrid" Background="{StaticResource TopBarGridColor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/Assets/LogoOnTitle.png" Stretch="None" />
+                <TextBlock Grid.Column="1" FontSize="20" Text="Amber and Teething" VerticalAlignment="Center"
+                           Foreground="White" />
+                <Grid Grid.Column="2" Tap="tblock_share_Tap">
+                    <!--<TextBlock x:Name="tblock_share"  Text="SHARE" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="20"  Foreground="White"/>-->
+                    <Image Source="/Assets/share(63x63).png" Stretch="None" />
+                </Grid>
+                <Grid Grid.Column="3" Tap="tblock_browse_Tap">
+                    <TextBlock x:Name="tblock_browse"  Text="BROWSE" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="20"  Foreground="White"/>
+                </Grid>
             </Grid>
             <!--<TextBlock Text="Quotes and Messages" VerticalAlignment="Top" HorizontalAlignment="Center"
                        Margin="0,20,0,0" FontSize="30" Foreground="{StaticResource DarkBlueTextBlock}"/>-->
         </Grid>
-        
-        
+
+
         <!--<html:HTMLViewer x:Name="ie_teethP1" Grid.Row="1" Margin="20 10 20 0" Foreground="{StaticResource FontColorBrown}" />-->
 
         <phone:WebBrowser Grid.Row="1" x:Name="wb_teethP1" Foreground="{StaticResource FontColorBrown}" />
