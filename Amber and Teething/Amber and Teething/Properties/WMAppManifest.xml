@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{17f0e1dd-74ee-46b4-84b2-c9177477c731}" Title="Amber &amp; Teething" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Amber_and_Teething author" Description="Amber &amp; Teething" Publisher="Amber_and_Teething" PublisherID="{4fbc2e28-bd13-49ca-b9dd-9d8fbd5f28cb}">
-    <IconPath IsRelative="true" IsResource="false">Assets\AppListLogo(160x160).png</IconPath>
+  <App xmlns="" ProductID="{17f0e1dd-74ee-46b4-84b2-c9177477c731}" Title="Amber &amp; Teething" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Amber_and_Teething author" Description="Amber Teething Necklace - natural teething remedy popular in Europe (specially Lithuanian region and Poland), now amber making its way to USA." Publisher="Amber_and_Teething" PublisherID="{4fbc2e28-bd13-49ca-b9dd-9d8fbd5f28cb}">
+    <IconPath IsRelative="true" IsResource="false">Assets\AppLogo(160x160).png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -15,26 +15,29 @@
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="Amber_and_TeethingToken" TaskName="_default">
-        <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+        <TemplateCycle>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\AppLogo(160x160).png</SmallImageURI>
+          <Title>Amber &amp; Teething</Title>
+          <Photo01ImageURI IsRelative="true" IsResource="false">Assets\Baltic Amber\chemical_composition.jpg</Photo01ImageURI>
+          <Photo02ImageURI IsRelative="true" IsResource="false">Assets\Baltic Amber\amber_in_medicine.jpg</Photo02ImageURI>
+          <Photo03ImageURI IsRelative="true" IsResource="false">Assets\AmberAndTeething\7_easy_tests.jpg</Photo03ImageURI>
+          <Photo04ImageURI IsRelative="true" IsResource="false">
+          </Photo04ImageURI>
+          <Photo05ImageURI IsRelative="true" IsResource="false">
+          </Photo05ImageURI>
+          <Photo06ImageURI IsRelative="true" IsResource="false">
+          </Photo06ImageURI>
+          <Photo07ImageURI IsRelative="true" IsResource="false">
+          </Photo07ImageURI>
+          <Photo08ImageURI IsRelative="true" IsResource="false">
+          </Photo08ImageURI>
+          <Photo09ImageURI IsRelative="true" IsResource="false">
+          </Photo09ImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>Amber_and_Teething</Title>
-          <BackContent>
-          </BackContent>
-          <BackBackgroundImageURI>
-          </BackBackgroundImageURI>
-          <BackTitle>
-          </BackTitle>
-          <LargeBackgroundImageURI IsRelative="true" IsResource="false">
-          </LargeBackgroundImageURI>
-          <LargeBackContent />
-          <LargeBackBackgroundImageURI IsRelative="true" IsResource="false">
-          </LargeBackBackgroundImageURI>
-          <DeviceLockImageURI>
-          </DeviceLockImageURI>
           <HasLarge>True</HasLarge>
-        </TemplateFlip>
+          <DeviceLockImageURI IsRelative="true" IsResource="false">
+          </DeviceLockImageURI>
+        </TemplateCycle>
       </PrimaryToken>
     </Tokens>
     <ScreenResolutions>

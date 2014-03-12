@@ -12,6 +12,7 @@ using System.IO;
 using System.IO.IsolatedStorage;
 using Amber_and_Teething.Helper;
 using Microsoft.Phone.Tasks;
+using System.Text;
 
 namespace Amber_and_Teething
 {
@@ -109,6 +110,7 @@ namespace Amber_and_Teething
                     default:
                         break;
                 }
+
             }
             catch (Exception ex)
             {
@@ -162,9 +164,6 @@ namespace Amber_and_Teething
             //    //MessageBox.Show(s);
             //}
             #endregion
-
-
-
 
         }
 
@@ -260,6 +259,81 @@ namespace Amber_and_Teething
                     break;
             }
         }
+
+
+        //private void ApplyStyleSheet(string cssFilename)
+        //{
+        //    try
+        //    {
+        //        var sr = Application.GetResourceStream(new Uri(cssFilename, UriKind.Relative));
+        //        using (var strm = sr.Stream)
+        //        using (var reader = new StreamReader(strm))
+        //        {
+        //            string css = reader.ReadToEnd().Replace("\r", "").Replace("\n", "");
+
+        //            var scriptToRun =
+        //                "(function() {" +
+        //                "  var pa= document.getElementsByTagName('head')[0] ; " +
+        //                "  var el= document.createElement('style'); " +
+        //                "  el.type= 'text/css'; " +
+        //                "  el.media= 'screen'; " +
+        //                "  el.styleSheet.cssText= '" + css + "'; " +
+        //                "  pa.appendChild(el); " +
+        //                "})();";
+
+        //            //wb_teethP1.InvokeScript(scriptToRun);
+
+        //            //wb_teethP1.InvokeScript("eval", new string[] { });
+        //            wb_teethP1.InvokeScript("eval", scriptToRun);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
+
+        private void wb_teethP1_Loaded(object sender, RoutedEventArgs e)
+        {
+            //ApplyStyleSheet("style.css");
+        }
+
+        private void wb_teethP1_Navigated(object sender, NavigationEventArgs e)
+        {
+            try
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.Append("function setCSS() { ");
+                sb.Append("var styleElement = document.createElement('style'); ");
+                sb.Append("var styleText = 'h1 { font-family: cambria; font-size: 23px; font-weight: bold; } .widget { width:100%; } .content p strong { color: #C76328; font-size: 18px; font-weight: bold; } li { color: #5D5D5D; font-size: 15px; } .content p { color: #5D5D5D; font-size: 15px; } .article img { width: 100%; }'; ");
+                sb.Append("var headElements = document.getElementsByTagName('head'); ");
+                sb.Append("styleElement.type = 'text/css'; ");
+                sb.Append("if (headElements.length == 1) { ");
+                sb.Append("   headElements[0].appendChild(styleElement); ");
+                sb.Append("} else if (document.head) { ");
+                sb.Append("document.head.appendChild(styleElement); ");
+                sb.Append("} ");
+                sb.Append("if (styleElement.styleSheet) { ");
+                sb.Append("styleElement.styleSheet.cssText = styleText; ");
+                sb.Append("} ");
+                sb.Append("} ");
+
+                string script = sb.ToString();
+                wb_teethP1.IsScriptEnabled = true;
+                wb_teethP1.InvokeScript("eval", new string[] { script });
+                wb_teethP1.InvokeScript("eval", new string[] { "setCSS()" });
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //void addCss()
+        //{
+            
+        //}
 
     }
 }

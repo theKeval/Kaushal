@@ -160,6 +160,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\AppListLogo%28160x160%29.png" />
+    <Content Include="Assets\AppLogo%28160x160%29.png" />
     <Content Include="Assets\Baltic Amber\amber_in_medicine.jpg" />
     <Content Include="Assets\Baltic Amber\amber_room.jpg" />
     <Content Include="Assets\Baltic Amber\chemical_composition.jpg" />
@@ -189,6 +190,7 @@
     <Content Include="HtmlContent\baltic_p3.html" />
     <Content Include="HtmlContent\baltic_p4.html" />
     <Content Include="HtmlContent\baltic_p5.html" />
+    <Content Include="style.css" />
     <Content Include="HtmlContent\teeth_p1.html" />
     <Content Include="HtmlContent\teeth_p2.html" />
     <Content Include="HtmlContent\teeth_p3.html" />

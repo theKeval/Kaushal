@@ -77,7 +77,8 @@
 
         <!--<html:HTMLViewer x:Name="ie_teethP1" Grid.Row="1" Margin="20 10 20 0" Foreground="{StaticResource FontColorBrown}" />-->
 
-        <phone:WebBrowser Grid.Row="1" x:Name="wb_teethP1" Foreground="{StaticResource FontColorBrown}" />
+        <phone:WebBrowser Grid.Row="1" x:Name="wb_teethP1" Foreground="{StaticResource FontColorBrown}"
+                          Loaded="wb_teethP1_Loaded" IsScriptEnabled="True" Navigated="wb_teethP1_Navigated"/>
         
 
         <!--TitlePanel contains the name of the application and page title-->
